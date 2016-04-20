@@ -10,9 +10,16 @@ Przy tworzeniu wykresu wymagane będzie podanie jednostki danych przedstawianych
 Pakiet danych wejściowych będzie zawierał:
 - identyfikator linii
 - wartość danej
-- czas od ostatniego pomiaru
+- czas pomiaru
 
 ### 1.4 Inne funkcjonalności
 - długość historii - konfigurowalny zakres czasu, z którego będą przedstawiane dane,
-- skalowanie wartości - dynamiczne skalowanie wartości danych, możliwość ustawienia stałego zakresu wartości,
+- skalowanie wartości - dynamiczne skalowanie wartości danych,
 - kolory linii - każda kolejna zarejestrowana linia na wykresie będzie miała inny kolor i wpis w legendzie.
+
+## 2. Projekt
+### 2.1 Wykorzystane biblioteki
+Do generowania i wyświetlania wykresu użyta zostanie biblioteka JFreeChart.
+
+### 2.2 Diagram klas
+![Diagram](http://i.imgur.com/PHkHLfE.png)
