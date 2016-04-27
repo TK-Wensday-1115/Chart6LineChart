@@ -25,9 +25,9 @@ Z punktu widzenia użytkownika modułu, dostępna będzie fabryka tworząca wykr
 
 |ChartFactory|
 |:---|
-|public IChart createHistoryChart(String name, String xAxisLabel, String yAxisLabel, String yAxisUnit)|
+|public IHistoryChart createHistoryChart(String name, String xAxisLabel, String yAxisLabel, String yAxisUnit)|
 
-|IChart|
+|IHistoryChart|
 |:-----|
 |public int registerNewLine(String label)|
 |public void addNewEntry(int lineId, double value, Date time)|
