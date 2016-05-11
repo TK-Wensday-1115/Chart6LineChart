@@ -10,9 +10,30 @@ Przy tworzeniu wykresu wymagane będzie podanie jednostki danych przedstawianych
 Pakiet danych wejściowych będzie zawierał:
 - identyfikator linii
 - wartość danej
-- czas od ostatniego pomiaru
+- czas pomiaru
 
 ### 1.4 Inne funkcjonalności
 - długość historii - konfigurowalny zakres czasu, z którego będą przedstawiane dane,
-- skalowanie wartości - dynamiczne skalowanie wartości danych, możliwość ustawienia stałego zakresu wartości,
-- kolory linii - każda kolejna zarejestrowana linia na wykresie będzie miała inny kolor i wpis w legendzie.
+- skalowanie wartości - dynamiczne skalowanie wartości danych,
+- kolory linii - każda kolejna zarejestrowana linia na wykresie będzie miała inny kolor i wpis w legendzie,
+- obsługa danych przychodzących nie w kolejności,
+- obsługa przestojów w przesyłaniu danych.
+
+## 2. Projekt
+### 2.1 API
+Z punktu widzenia użytkownika modułu, dostępna będzie fabryka tworząca wykresy.
+
+|ChartFactory|
+|:---|
+|public IHistoryChart createHistoryChart(String name, String xAxisLabel, String yAxisLabel, String yAxisUnit)|
+
+|IHistoryChart|
+|:-----|
+|public int registerNewLine(String label)|
+|public void addNewEntry(int lineId, double value, Date time)|
+
+### 2.2 Wykorzystane biblioteki
+Do generowania i wyświetlania wykresu użyta zostanie biblioteka JFreeChart.
+
+### 2.3 Diagram klas
+![Diagram](http://i.imgur.com/kUbZgQ3.png)
