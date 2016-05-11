@@ -1,7 +1,7 @@
 package pl.edu.agh.toik.historychart;
 
 /**
- * Created by Maciej Imiolek on 2016-05-11.
+ * Enum representing unit of time interval between data entries for History Chart.
  */
 public enum TimeUnit {
     Millisecond,

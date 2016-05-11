@@ -12,7 +12,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Maciej Imiolek on 2016-05-10.
+ * <pre>
+ * JPanel representation of a History Chart.
+ * Presents continuous data gathered over time.
+ * Each data source is represented by separate line on the chart.
+ * </pre>
  */
 public class HistoryChart extends JPanel {
 
@@ -24,7 +28,17 @@ public class HistoryChart extends JPanel {
     private int nextLineId;
     private TimeUnit timeUnit;
 
-    public HistoryChart(String name, String xAxisLabel, TimeUnit timeUnit, String yAxisLabel, String yAxisUnit) {
+    /**
+     * Constructs new History Chart with given parameters
+     * @param name Chart header
+     * @param xAxisLabel Time axis label
+     * @param timeUnit Unit of time interval between data entries,
+     *                 example: if TimeUnit.Second is chosen and more than one entries occurring at the same second
+     *                          are provided, each consecutive entry will override the previous one
+     * @param yAxisLabel Value axis label
+     * @param yAxisUnit Value axis unit
+     */
+    HistoryChart(String name, String xAxisLabel, TimeUnit timeUnit, String yAxisLabel, String yAxisUnit) {
         prepareLayout();
 
         this.lines = new HashMap<>();
@@ -52,10 +66,11 @@ public class HistoryChart extends JPanel {
 
     /**
      * Adds new entry to data series
+     * Entries are not required to be added chronologically
      * @param lineId Line handle - obtained from registerNewLine method execution
      * @param value Data value
      * @param time Point of time at which the entry will appear on History Chart
-     * @throws DataLineDoesNotExistException when line with given id does not exist
+     * @throws DataLineDoesNotExistException When line with given id does not exist
      */
     public void addNewEntry(int lineId, double value, Date time) throws DataLineDoesNotExistException {
         if (!lines.containsKey(lineId)) {

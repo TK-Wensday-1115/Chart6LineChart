@@ -1,7 +1,7 @@
 package pl.edu.agh.toik.historychart;
 
 /**
- * Created by Maciej Imiolek on 2016-05-11.
+ * Thrown by HistoryChart.addNewEntry when line with given id does not exist.
  */
 public class DataLineDoesNotExistException extends Exception {
 }

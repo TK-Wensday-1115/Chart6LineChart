@@ -8,10 +8,7 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Maciej Imiolek on 2016-05-10.
- */
-public class HistoryManager extends JPanel implements ActionListener {
+class HistoryManager extends JPanel implements ActionListener {
     private final ValueAxis timeAxis;
     private final Map<String, Double> multipliers;
 
