@@ -21,7 +21,7 @@ public class HistoryChartUsageExample {
         prepareGui();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         HistoryChartUsageExample example = new HistoryChartUsageExample();
         Random rand = new Random();
 

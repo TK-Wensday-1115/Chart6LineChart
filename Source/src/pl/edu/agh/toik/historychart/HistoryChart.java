@@ -56,7 +56,7 @@ public class HistoryChart extends JPanel {
      * @param label Will appear as line description in chart legend
      * @return New line handle - used to identify line in addNewEntry method executions
      */
-    public int registerNewLine(String label) {
+    public synchronized int registerNewLine(String label) {
         TimeSeries newSeries = new TimeSeries(label);
         dataSet.addSeries(newSeries);
         lines.put(nextLineId, newSeries);
@@ -72,7 +72,7 @@ public class HistoryChart extends JPanel {
      * @param time Point of time at which the entry will appear on History Chart
      * @throws DataLineDoesNotExistException When line with given id does not exist
      */
-    public void addNewEntry(int lineId, double value, Date time) throws DataLineDoesNotExistException {
+    public synchronized void addNewEntry(int lineId, double value, Date time) throws DataLineDoesNotExistException {
         if (!lines.containsKey(lineId)) {
             throw new DataLineDoesNotExistException();
         }
