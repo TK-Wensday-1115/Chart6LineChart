@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact name="HistoryChart:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/HistoryChart_jar</output-path>
+    <root id="root">
+      <element id="archive" name="HistoryChart-1.0.0.jar">
+        <element id="module-output" name="HistoryChart" />
+      </element>
+      <element id="library" level="project" name="jfreechart-1.0.19" />
+      <element id="library" level="project" name="jcommon-1.0.23" />
+    </root>
+  </artifact>
+</component>

@@ -1,4 +1,4 @@
-package pl.edu.agh.toik.historychart.prototype;
+package pl.adu.agh.toik.historychart.example;
 
 import pl.edu.agh.toik.historychart.HistoryChart;
 import pl.edu.agh.toik.historychart.HistoryChartFactory;
@@ -10,19 +10,19 @@ import java.util.Date;
 import java.util.Random;
 
 /**
- * Created by Maciej Imiolek on 2016-04-19.
+ * Created by Maciej Imiolek on 2016-05-11.
  */
-public class PrototypeChart {
+public class HistoryChartUsageExample {
 
     private JFrame frame;
     private static HistoryChart chart;
 
-    public PrototypeChart() {
+    public HistoryChartUsageExample() {
         prepareGui();
     }
 
     public static void main(String[] args) {
-        PrototypeChart prototype = new PrototypeChart();
+        HistoryChartUsageExample example = new HistoryChartUsageExample();
         Random rand = new Random();
 
         new Thread(() -> {
@@ -53,8 +53,9 @@ public class PrototypeChart {
     private void prepareGui() {
         frame = new JFrame("History Chart Example");
         frame.setSize(new Dimension(800, 600));
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        chart = HistoryChartFactory.createNew("Prototype", "Time", TimeUnit.Second, "Speed", "m/s");
+        chart = HistoryChartFactory.createNew("History Chart Example", "Time", TimeUnit.Second, "Speed", "m/s");
 
         frame.add(chart);
         frame.setVisible(true);

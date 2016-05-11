@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="HistoryChart-1.0.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Source/out/artifacts/HistoryChart_jar/HistoryChart-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Source/out/artifacts/HistoryChart_jar/jcommon-1.0.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Source/out/artifacts/HistoryChart_jar/jfreechart-1.0.19.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
