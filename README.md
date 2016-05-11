@@ -36,7 +36,7 @@ Z punktu widzenia użytkownika modułu, dostępna będzie fabryka tworząca wykr
 Do generowania i wyświetlania wykresu użyta zostanie biblioteka JFreeChart.
 
 ### 2.3 Diagram klas
-![Diagram](http://i.imgur.com/kUbZgQ3.png)
+![Diagram](http://i.imgur.com/DXSCLKh.png)
 
 ## 3. Przykład użycia
 ### 3.1 Import biblioteki
