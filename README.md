@@ -1,4 +1,4 @@
-# Wykres Liniowy
+# Wykres Historii
 ## 1. Wizja
 ### 1.1 Założenia
 Komponent ma za zadanie wyśiwetlać dane pochodzące z wielu źródeł na jednym wykresie. Każda linia na wykresie będzie przedstawiać wartość danej pochodzącej z jendgo źródła w stosunku do upływającego czasu. Źródła będą dostarczać pakiety danych wejściowych, na podstawie których uaktualniany będzie wykres.
